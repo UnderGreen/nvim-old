@@ -78,3 +78,8 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- rest
+keymap("n", "<leader>rr", "<cmd>:lua require('rest-nvim').run()<CR>", opts) -- run request under the cursor
+keymap("n", "<leader>rp", "<cmd>:lua require('rest-nvim').run(true)<CR>", opts) -- preview curl request
+keymap("n", "<leader>rl", "<cmd>:lua require('rest-nvim').last()<CR>", opts) -- run last executed request again
