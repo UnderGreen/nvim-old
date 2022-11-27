@@ -83,3 +83,9 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<leader>rr", "<cmd>:lua require('rest-nvim').run()<CR>", opts) -- run request under the cursor
 keymap("n", "<leader>rp", "<cmd>:lua require('rest-nvim').run(true)<CR>", opts) -- preview curl request
 keymap("n", "<leader>rl", "<cmd>:lua require('rest-nvim').last()<CR>", opts) -- run last executed request again
+
+-- show highlights
+keymap("n", "<C-e>", function()
+	local result = vim.treesitter.get_captures_at_cursor(0)
+	print(vim.inspect(result))
+end, opts)
