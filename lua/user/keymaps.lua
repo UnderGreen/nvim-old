@@ -45,6 +45,20 @@ keymap("v", "p", '"_dP', opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
+-- Don't copy deleted symbol into register
+keymap("n", "x", "_x")
+
+-- window management
+keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
+keymap("n", "<leader>sx", ":close<CR>") -- close current split window
+
+keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
+keymap("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+keymap("n", "<leader>tn", ":tabn<CR>") --  go to next tab
+keymap("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -58,6 +72,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Telescope
 keymap("n", "<leader>ff", ":lua require'telescope.builtin'.find_files({ hidden = true })<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fc", ":Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
@@ -86,6 +101,6 @@ keymap("n", "<leader>rl", "<cmd>:lua require('rest-nvim').last()<CR>", opts) -- 
 
 -- show highlights
 keymap("n", "<C-e>", function()
-	local result = vim.treesitter.get_captures_at_cursor(0)
-	print(vim.inspect(result))
+  local result = vim.treesitter.get_captures_at_cursor(0)
+  print(vim.inspect(result))
 end, opts)
