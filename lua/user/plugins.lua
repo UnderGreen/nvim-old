@@ -59,6 +59,7 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" })
 	use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" })
+	use({ "tversteeg/registers.nvim", commit = "2c4f82a8a68b7d3cee7bd345669f2f50bdc6f889" })
 
 	-- Sergei's personal plugins
 	use({ "rest-nvim/rest.nvim", commit = "2e368cd681379f014906ad0268111eb5c95f9aa6" })
@@ -93,7 +94,8 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+		commit = "4b900527045c49af5f43291d2cb13ae27a3bc7be",
+		run = ":TSUpdate",
 	})
 
 	-- Git
