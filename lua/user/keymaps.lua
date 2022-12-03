@@ -45,9 +45,6 @@ keymap("v", "p", '"_dP', opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
--- Don't copy deleted symbol into register
-keymap("n", "x", "_x")
-
 -- window management
 keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
