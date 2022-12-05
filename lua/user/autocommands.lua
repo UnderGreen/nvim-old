@@ -72,7 +72,10 @@ local function go_org_imports(wait_ms)
   end
 end
 
+-- to organize imports on buffer write
+local augroup = vim.api.nvim_create_augroup("GoImport", {})
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  group = augroup,
   callback = function()
     go_org_imports()
   end,
