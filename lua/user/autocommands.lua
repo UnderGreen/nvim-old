@@ -76,6 +76,7 @@ end
 local augroup = vim.api.nvim_create_augroup("GoImport", {})
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   group = augroup,
+  pattern = "golang",
   callback = function()
     go_org_imports()
   end,

@@ -26,6 +26,7 @@ telescope.setup({
     pickers = {
       buffers = {
         ignore_current_buffer = true,
+        sort_last_used = true,
         sort_mru = true,
       },
     },

@@ -8,6 +8,7 @@ local servers = {
   "jsonls",
   "yamlls",
   "gopls",
+  "clojure_lsp",
 }
 
 local settings = {

@@ -59,11 +59,13 @@ return packer.startup(function(use)
   use({ "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" })
   use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" })
   use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" })
-  use({ "tversteeg/registers.nvim", commit = "2c4f82a8a68b7d3cee7bd345669f2f50bdc6f889" })
-  use({ "nvim-zh/colorful-winsep.nvim", commit = "bb06c8678b1f879f14264aaba721098cc5495768" })
 
   -- Sergei's personal plugins
   use({ "rest-nvim/rest.nvim", commit = "2e368cd681379f014906ad0268111eb5c95f9aa6" })
+  use({ "tversteeg/registers.nvim", commit = "2c4f82a8a68b7d3cee7bd345669f2f50bdc6f889" })
+  use({ "nvim-zh/colorful-winsep.nvim", commit = "bb06c8678b1f879f14264aaba721098cc5495768" })
+  use({ "Olical/conjure", commit = "0be93ef60f075a247bb5de9e29d447dc8a888ff0" })
+  use({ "j-hui/fidget.nvim", commit = "44585a0c0085765195e6961c15529ba6c5a2a13b" })
 
   -- Colorschemes
   use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
@@ -76,6 +78,7 @@ return packer.startup(function(use)
   use({ "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }) -- snippet completions
   use({ "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" })
   use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" })
+  use({ "PaterJason/cmp-conjure", commit = "d76e1fe5d724afe604dfa7b4b5ba93f3d3730617" })
 
   -- snippets
   use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
