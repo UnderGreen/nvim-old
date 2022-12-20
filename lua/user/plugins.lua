@@ -110,6 +110,7 @@ return packer.startup(function(use)
     commit = "4b900527045c49af5f43291d2cb13ae27a3bc7be",
     run = ":TSUpdate",
   })
+  use({ "p00f/nvim-ts-rainbow", commit = "064fd6c0a15fae7f876c2c6dd4524ca3fad96750" })
 
   -- Git
   use({ "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" })
