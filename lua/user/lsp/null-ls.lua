@@ -21,7 +21,7 @@ null_ls.setup({
     formatting.google_java_format,
     diagnostics.flake8,
     -- Clojure
-    formatting.zprint,
+    formatting.zprint.with({ command = "/usr/local/bin/zprintm" }),
   },
   -- configure format on save
   on_attach = function(current_client, bufnr)
