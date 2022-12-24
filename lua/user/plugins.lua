@@ -111,6 +111,11 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   })
   use({ "p00f/nvim-ts-rainbow", commit = "064fd6c0a15fae7f876c2c6dd4524ca3fad96750" })
+  use({ -- Additional text objects via treesitter
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    commit = "a2e436d88d1880da6678049316e4c45135901866",
+  })
 
   -- Git
   use({ "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" })
