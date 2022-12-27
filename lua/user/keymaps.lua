@@ -17,21 +17,21 @@ vim.g.maplocalleader = ","
 --   command_mode = "c",
 
 -- Normal --
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
--- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- Resize keymaps the same as in tmux
+keymap("n", "<C-b>k", ":resize -2<CR>", opts)
+keymap("n", "<C-b>j", ":resize +2<CR>", opts)
+keymap("n", "<C-b>h", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-b>l", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>n", ":bnext<CR>", opts)
+keymap("n", "<leader>b", ":bprevious<CR>", opts)
+
+-- Navigate between tmux and vice versa
+keymap("n", "<C-h>", ":NvimTmuxNavigateLeft<CR>", opts)
+keymap("n", "<C-j>", ":NvimTmuxNavigateDown<CR>", opts)
+keymap("n", "<C-k>", ":NvimTmuxNavigateUp<CR>", opts)
+keymap("n", "<C-l>", ":NvimTmuxNavigateRight<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)

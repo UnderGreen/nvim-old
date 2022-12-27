@@ -66,6 +66,7 @@ return packer.startup(function(use)
   use({ "nvim-zh/colorful-winsep.nvim", commit = "bb06c8678b1f879f14264aaba721098cc5495768" })
   use({ "Olical/conjure", commit = "0be93ef60f075a247bb5de9e29d447dc8a888ff0" })
   use({ "j-hui/fidget.nvim", commit = "44585a0c0085765195e6961c15529ba6c5a2a13b" })
+  use({ "alexghergh/nvim-tmux-navigation", commit = "84a72a1f7655a2b2ced53abc7aea21f05019642a" })
 
   -- Colorschemes
   use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
