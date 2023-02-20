@@ -15,12 +15,15 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   debug = false,
   sources = {
+    formatting.clang_format,
     formatting.prettier,
     formatting.black.with({ extra_args = { "--fast" } }),
     formatting.gofmt,
     formatting.stylua,
     formatting.google_java_format,
+    formatting.shfmt,
     diagnostics.flake8,
+    diagnostics.cpplint,
     -- Clojure
     formatting.zprint.with({ command = "/usr/local/bin/zprintm" }),
   },

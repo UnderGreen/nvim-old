@@ -9,6 +9,7 @@ local servers = {
   "yamlls",
   "gopls",
   "clojure_lsp",
+  "ccls",
 }
 
 local settings = {
