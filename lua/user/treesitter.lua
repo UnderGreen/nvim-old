@@ -16,6 +16,7 @@ configs.setup({
     "yaml",
     "go",
     "clojure",
+    "terraform",
   }, -- put the language you want in this array
   -- ensure_installed = "all", -- one of "all" or a list of languages
   ignore_install = { "" }, -- List of parsers to ignore installing
@@ -42,14 +43,5 @@ configs.setup({
       scope_incremental = "<c-s>",
       node_decremental = "<c-backspace>",
     },
-  },
-
-  rainbow = {
-    enable = true,
-    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-    max_file_lines = nil, -- Do not enable for files with more than n lines, int
-    -- colors = {}, -- table of hex strings
-    -- termcolors = {} -- table of colour name strings
   },
 })

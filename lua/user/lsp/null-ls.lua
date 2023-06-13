@@ -21,9 +21,11 @@ null_ls.setup({
     formatting.gofmt,
     formatting.stylua,
     formatting.google_java_format,
+    formatting.terraform_fmt,
     formatting.shfmt,
     diagnostics.flake8,
     diagnostics.cpplint,
+    diagnostics.terraform_validate,
     -- Clojure
     formatting.zprint.with({ command = "/usr/local/bin/zprintm" }),
   },
